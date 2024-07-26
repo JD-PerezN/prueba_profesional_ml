@@ -38,6 +38,46 @@ pip install -r requirements.txt
 cd code
 ```
 
+### Ejecución del servidor
+```bash
+python main.py
+```
+
+### Envío de una solicitud POST al servidor usando POSTMAN con un json que contenga los datos de entrada
+URL a enviar la petición POST
+```bash
+http://localhost:5000/api/predict
+```
+
+Ejemplo de json con los datos de entrada
+```bash
+{
+    "autoID": "9695-TERGH",
+    "SeniorCity": 0,
+    "Partner": "No",
+    "Dependents": "No",
+    "Service1": "Yes",
+    "Service2": "No",
+    "Security": "Yes",
+    "OnlineBackup": "No",
+    "DeviceProtection": "No",
+    "TechSupport": "No",
+    "Contract": "Month-to-month",
+    "PaperlessBilling": "Yes",
+    "PaymentMethod": "Electronic check",
+    "Charges": 96.05 
+}
+```
+
+### Interpretación de los resultados
+El código devolverá un status 200 OK con un cuerpo que contiene un json de las 2 variables a calcular (class y demand) en tipo texto
+```bash
+{
+    "class": "Alpha",
+    "demand": "1770.2098"
+}
+```
+
 ## Uso
 
 ### Estructura de carpetas
@@ -61,6 +101,7 @@ PRUEBA_PROFESIONAL_ML/
 │   │   ├── __pycache__/
 │   │   ├── __init__.py
 │   │   ├── classification_demand.ipynb
+│   │   ├── label_encodings.json
 │   │   ├── preprocessing.py
 │   │   └── time_series_demand.ipynb
 │   └── main.py
