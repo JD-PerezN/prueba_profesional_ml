@@ -1,20 +1,31 @@
 from utils.preprocessing import preprocess_input
 from joblib import load
+from flask import Blueprint, request, jsonify
 
-xgb_classifier = load('code\\models\\xgb_classifier.joblib')
-svr_regressor = load('code\\models\\svr_regressor.joblib')
+xgb_classifier = load('models\\xgb_classifier.joblib')
+xgb_regressor = load('models\\xgb_regressor.joblib')
 
-path = "code\\api\\to_predict.csv"
+api = Blueprint("api", __name__)
 
-def prueba():
-    X_pca = preprocess_input(path)
+@api.route("/predict", methods=["POST"])
+def predict():
+    data = request.json
+
+    X_pca = preprocess_input(data)
 
     class_prediction = xgb_classifier.predict(X_pca)[0]
-    demand_prediction = svr_regressor.predict(X_pca)[0]
+    demand_prediction = xgb_regressor.predict(X_pca)[0]
+
+    mapping = {
+        0: "Alpha",
+        1: "Betha"
+    }
+
+    real_class = mapping.get(class_prediction)
 
     response = {
-            'class': class_prediction,
-            'demand': float(demand_prediction)
+            'class': real_class,
+            'demand': str(demand_prediction)
         }
 
-    return (response)
+    return jsonify(response)
