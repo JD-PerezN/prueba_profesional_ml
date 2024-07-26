@@ -1,0 +1,54 @@
+{
+    "Partner": {
+        "No": 0,
+        "Yes": 1
+    },
+    "Dependents": {
+        "No": 0,
+        "Yes": 1
+    },
+    "Service1": {
+        "No": 0,
+        "Yes": 1
+    },
+    "Service2": {
+        "No": 0,
+        "Yes": 1,
+        "No phone service": 2
+    },
+    "Security": {
+        "No": 0,
+        "Yes": 1,
+        "No internet service": 2
+    },
+    "OnlineBackup": {
+        "No": 0,
+        "Yes": 1,
+        "No internet service": 2
+    },
+    "DeviceProtection": {
+        "No": 0,
+        "Yes": 1,
+        "No internet service": 2
+    },
+    "TechSupport": {
+        "No": 0,
+        "Yes": 1,
+        "No internet service": 2
+    },
+    "Contract": {
+        "Month-to-month": 0,
+        "One year": 1,
+        "Two year": 2
+    },
+    "PaperlessBilling": {
+        "No": 0,
+        "Yes": 1
+    },
+    "PaymentMethod": {
+        "Electronic check": 0,
+        "Mailed check": 1,
+        "Bank transfer (automatic)": 2,
+        "Credit card (automatic)": 3
+    }
+}

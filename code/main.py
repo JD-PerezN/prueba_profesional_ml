@@ -1,5 +1,8 @@
-from api.endpoints import prueba
+from flask import Flask
+from api.endpoints import api
 
-valor = prueba()
+app = Flask(__name__)
+app.register_blueprint(api, url_prefix="/api")
 
-print(valor)
+if __name__ == "__main__":
+    app.run(debug=True)
