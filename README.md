@@ -88,6 +88,10 @@ El notebook time_series_demand.ipynb contiene el modelo para predecir la demanda
 ### Modelo de clasificación y regresión
 El notebook classification_demand.ipynb contiene el modelo para predecir el valor de la clase clasificación y el valor de la demanda mediante regresión. Estos modelos se guardan en la carpeta El archivo con el que se entrenó los modelos es dataset_alpha_betha.csv 
 
+### Github
+Se crearon 2 ramas fijas en el repositorio: main (rama principal) y develop (rama intermedia)
+En los diferentes ejercicios se han creado ramas temporales en las cuales se trabaja todo lo relacionado con el ejercicio y se realiza el PR a la rama develop 
+
 ## Características
 * Modelo de series temporales para predecir la demanda mensual.
 * Modelo de clasificación y regresión para predecir tanto la demanda como la clase.
