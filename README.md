@@ -70,7 +70,8 @@ PRUEBA_PROFESIONAL_ML/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── teoria_.pdf
 ```
 ### Carpeta models
 Contiene los modelos de regresión (xgb_classifier.joblib), clasificación (xgb_classifier.joblib), PCA con los datos entrenados (pca_transformer.joblib) y la normalización de los datos entrenados (standard_scaler.joblib)
