@@ -143,4 +143,3 @@ Este proyecto está licenciado bajo la Licencia MIT - mira el archivo LICENSE pa
 
 ## Contacto
 Julián David Pérez Navarro - jd.perez998@gmail.com
-Enlace del Proyecto: https://github.com/JD-PerezN/prueba_profesional_ml
